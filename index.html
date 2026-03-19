@@ -1,23 +1,372 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus objetivos do ano</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Esthefany • Futura Fisioterapeuta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-font {
+            font-family: 'Playfair Display', sans-serif;
+        }
+        .purple-gradient {
+            background: linear-gradient(135deg, #6b21a8, #a855f7, #c084fc);
+        }
+        .card-hover {
+            transition: all 0.4s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 25px 50px -12px rgb(168 85 247);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -2px;
+            left: 0;
+            background: #c084fc;
+            transition: width 0.3s;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+    </style>
 </head>
+<body class="bg-zinc-950 text-white overflow-x-hidden">
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 w-full z-50 bg-zinc-900/80 backdrop-blur-lg border-b border-purple-500">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-violet-400 to-fuchsia-400 rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg">👩‍⚕️</div>
+                <h1 class="text-2xl font-bold tracking-tight">Esthefany</h1>
+            </div>
+            
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#sobre" class="nav-link hover:text-purple-300">Sobre mim</a>
+                <a href="#sonho" class="nav-link hover:text-purple-300">Meu Sonho</a>
+                <a href="#objetivos" class="nav-link hover:text-purple-300">Objetivos</a>
+                <a href="#motivação" class="nav-link hover:text-purple-300">Motivação</a>
+            </div>
+            
+            <a href="#contato" 
+               class="px-6 py-2.5 bg-white text-zinc-950 font-semibold rounded-full hover:bg-purple-300 transition-all flex items-center gap-2">
+                <i class="fas fa-paper-plane"></i> 
+                Fale comigo
+            </a>
+        </div>
+    </nav>
 
-<body>
-    <section class="conteudo-principal">
-        <h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
-        <div class="botoes">
-            <button class="botao">Cursos na Alura</button>
-            <button class="botao">Criar projetos em Javascript</button>
-            <button class="botao">Criar um portfolio</button>
-            <button class="botao">Atualizar meu currículo</button>
+    <!-- HERO -->
+    <section class="min-h-screen purple-gradient flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur px-4 py-1 rounded-full text-sm">
+                    <span class="animate-pulse">🧠</span>
+                    15 anos • Curitiba • Futura Fisioterapeuta
+                </div>
+                
+                <h1 class="hero-font text-7xl md:text-8xl font-bold leading-none tracking-tighter">
+                    OLÁ, EU SOU<br>
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-200 to-fuchsia-200">ESTHEFANY</span>
+                </h1>
+                
+                <p class="text-2xl font-light text-purple-100">
+                    Tenho <span class="font-bold text-white">15 anos</span> e meu maior sonho é me formar em <span class="font-bold underline decoration-fuchsia-300">Fisioterapia</span> 
+                    na universidade federal pública.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="#objetivos" 
+                       class="px-8 py-4 bg-white text-purple-700 font-semibold rounded-2xl flex items-center gap-3 hover:bg-purple-100 transition-all shadow-xl">
+                        <i class="fas fa-rocket"></i>
+                        Ver meus objetivos
+                    </a>
+                    <a href="#sobre" 
+                       class="px-8 py-4 border-2 border-white/70 hover:bg-white/10 font-semibold rounded-2xl transition-all">
+                        Conhecer minha história →
+                    </a>
+                </div>
+                
+                <div class="flex gap-6 text-sm">
+                    <div>
+                        <span class="block text-3xl font-bold text-white">2026</span>
+                        <span class="text-purple-200">Início do Ensino Médio</span>
+                    </div>
+                    <div>
+                        <span class="block text-3xl font-bold text-white">2030</span>
+                        <span class="text-purple-200">Vestibular UFPR</span>
+                    </div>
+                    <div>
+                        <span class="block text-3xl font-bold text-white">2035</span>
+                        <span class="text-purple-200">Formada Fisioterapeuta</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Foto + badge -->
+            <div class="relative flex justify-center">
+                <div class="w-96 h-96 bg-zinc-800 rounded-3xl overflow-hidden border-8 border-white/30 shadow-2xl">
+                    <div class="w-full h-full bg-[url('https://picsum.photos/id/1011/600/600')] bg-cover bg-center relative">
+                        <!-- Overlay roxo -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-950/90 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 bg-white/90 text-zinc-900 px-6 py-3 rounded-2xl shadow-xl">
+                            <div class="flex items-center gap-3">
+                                <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                                <p class="font-semibold">15 anos • Sonhando alto ✨</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Flutuante badge -->
+                        <div class="absolute -top-4 -right-4 bg-white text-purple-700 px-5 py-2 rounded-2xl font-bold shadow-2xl rotate-12">
+                            🎯 UFPR 2030
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Decorative elements -->
+                <div class="absolute -left-10 top-20 bg-fuchsia-400 text-zinc-900 text-xs font-bold px-4 py-1 rounded-full shadow-xl rotate-[-8deg]">
+                    💜 FISIOTERAPIA É MINHA PAIXÃO
+                </div>
+                <div class="absolute -bottom-8 right-12 bg-white/10 backdrop-blur px-5 py-3 rounded-2xl text-center border border-white/30">
+                    <p class="text-3xl font-bold">1º</p>
+                    <p class="text-xs -mt-1">Lugar no meu coração</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 flex flex-col items-center">
+            <span class="text-xs tracking-widest opacity-60">ROLE PARA BAIXO</span>
+            <i class="fas fa-chevron-down animate-bounce text-2xl mt-1"></i>
         </div>
     </section>
-</body>
 
+    <!-- SOBRE MIM -->
+    <section id="sobre" class="py-24 bg-zinc-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-5">
+                    <h2 class="text-5xl font-bold hero-font text-purple-300">Quem sou eu?</h2>
+                    <p class="mt-6 text-lg leading-relaxed text-zinc-300">
+                        Meu nome é Esthefany, tenho 15 anos e moro em Curitiba. 
+                        Sou apaixonada por ajudar as pessoas a se moverem melhor, 
+                        a recuperarem sua qualidade de vida e a voltarem a sorrir depois de uma lesão.
+                    </p>
+                    <div class="mt-8 space-y-6">
+                        <div class="flex gap-4">
+                            <i class="fas fa-heart text-4xl text-rose-400"></i>
+                            <div>
+                                <p class="font-semibold">Minha paixão</p>
+                                <p class="text-zinc-400">Fisioterapia neurológica e esportiva</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <i class="fas fa-book text-4xl text-emerald-400"></i>
+                            <div>
+                                <p class="font-semibold">Estudando agora</p>
+                                <p class="text-zinc-400">2º ano do Ensino Médio • Nota média 9,2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="alert('💜 Obrigada por acreditar em mim! Vamos juntas conquistar a UFPR!')"
+                            class="mt-10 px-8 py-3 bg-purple-600 hover:bg-purple-500 font-semibold rounded-xl flex items-center gap-2">
+                        <i class="fas fa-hand-heart"></i> 
+                        Torne-se meu apoiador
+                    </button>
+                </div>
+                
+                <div class="md:col-span-7 bg-zinc-800 rounded-3xl p-8 grid grid-cols-2 gap-6">
+                    <div class="bg-zinc-700/50 rounded-2xl p-6 card-hover">
+                        <span class="text-4xl">🏋️</span>
+                        <h3 class="font-semibold mt-4">Aulas de Pilates</h3>
+                        <p class="text-zinc-400 text-sm">Pratico 2x por semana para entender o corpo</p>
+                    </div>
+                    <div class="bg-zinc-700/50 rounded-2xl p-6 card-hover">
+                        <span class="text-4xl">📚</span>
+                        <h3 class="font-semibold mt-4">Leio livros de anatomia</h3>
+                        <p class="text-zinc-400 text-sm">Já li “O Corpo Humano” e “Fisioterapia Essencial”</p>
+                    </div>
+                    <div class="bg-zinc-700/50 rounded-2xl p-6 card-hover">
+                        <span class="text-4xl">🏥</span>
+                        <h3 class="font-semibold mt-4">Voluntária em clínica</h3>
+                        <p class="text-zinc-400 text-sm">Acompanho minha tia fisioterapeuta aos sábados</p>
+                    </div>
+                    <div class="bg-zinc-700/50 rounded-2xl p-6 card-hover">
+                        <span class="text-4xl">🎯</span>
+                        <h3 class="font-semibold mt-4">Meta 2026</h3>
+                        <p class="text-zinc-400 text-sm">Tirar 980+ no Enem e passar na UFPR</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SONHO -->
+    <section id="sonho" class="py-24 purple-gradient text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-6xl font-bold hero-font">Meu maior sonho</h2>
+            <div class="mt-12 bg-white/10 backdrop-blur-xl rounded-3xl p-10 inline-block">
+                <p class="text-3xl leading-relaxed">
+                    “Me formar em Fisioterapia na <span class="font-bold text-white">Universidade Federal do Paraná</span> 
+                    e um dia abrir minha própria clínica especializada em reabilitação infantil e esportiva.”
+                </p>
+                <div class="flex justify-center gap-8 mt-10">
+                    <div class="text-center">
+                        <span class="block text-5xl">🏛️</span>
+                        <p class="font-bold">UFPR</p>
+                        <p class="text-xs opacity-70">Curso público • Nota de corte alta</p>
+                    </div>
+                    <div class="text-center">
+                        <span class="block text-5xl">🎓</span>
+                        <p class="font-bold">5 anos</p>
+                        <p class="text-xs opacity-70">Bacharelado + residência</p>
+                    </div>
+                    <div class="text-center">
+                        <span class="block text-5xl">💼</span>
+                        <p class="font-bold">Clínica</p>
+                        <p class="text-xs opacity-70">Esthefany Fisioterapia • 2036</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OBJETIVOS -->
+    <section id="objetivos" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-center text-5xl font-bold mb-16">📍 Meus objetivos claros</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-zinc-800 border border-purple-400/30 rounded-3xl p-8 card-hover">
+                    <div class="text-6xl mb-4">🏆</div>
+                    <h3 class="font-bold text-2xl">1. Passar na UFPR</h3>
+                    <ul class="mt-6 space-y-3 text-zinc-300">
+                        <li class="flex items-center gap-2">✅ Estudar 4h/dia de Biologia e Química</li>
+                        <li class="flex items-center gap-2">✅ Fazer curso pré-vestibular gratuito</li>
+                        <li class="flex items-center gap-2">✅ Tirar 980+ no ENEM 2029</li>
+                    </ul>
+                    <div class="mt-8 h-2 bg-zinc-700 rounded-full overflow-hidden">
+                        <div class="h-2 bg-gradient-to-r from-pink-400 to-purple-400 w-3/4 rounded-full"></div>
+                    </div>
+                    <p class="text-xs text-center mt-2 text-purple-300">75% do caminho traçado • 2026-2029</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-zinc-800 border border-purple-400/30 rounded-3xl p-8 card-hover relative">
+                    <span class="absolute -top-3 right-6 bg-rose-500 text-white text-xs px-3 py-1 rounded-full">PRIORIDADE #1</span>
+                    <div class="text-6xl mb-4">🏛️</div>
+                    <h3 class="font-bold text-2xl">2. Faculdade Pública</h3>
+                    <p class="mt-4 text-zinc-400">Só quero estudar em instituição federal. Não vou pagar mensalidade.</p>
+                    <button class="mt-8 w-full py-3 bg-purple-600 hover:bg-purple-500 font-semibold rounded-2xl">
+                        Plano de estudos detalhado (PDF)
+                    </button>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-zinc-800 border border-purple-400/30 rounded-3xl p-8 card-hover">
+                    <div class="text-6xl mb-4">🌟</div>
+                    <h3 class="font-bold text-2xl">3. Ser referência</h3>
+                    <ul class="mt-6 space-y-3 text-zinc-300">
+                        <li>🚀 Criar canal no YouTube sobre Fisioterapia</li>
+                        <li>🚀 Fazer intercâmbio na Espanha</li>
+                        <li>🚀 Publicar artigo científico ainda na graduação</li>
+                    </ul>
+                    <div class="mt-10 flex justify-between items-end">
+                        <p class="text-sm">2035 • Formada com louvor</p>
+                        <span class="text-5xl">💜</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button onclick="window.alert('Site lindo! Compartilhe com seus amigos e família ❤️\n\nVocê vai conseguir Esthefany!')"
+                        class="px-10 py-4 bg-white text-zinc-950 text-lg font-bold rounded-3xl shadow-2xl hover:scale-105 transition">
+                    ✨ Eu acredito em você! Compartilhar site
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- MOTIVAÇÃO -->
+    <section id="motivação" class="py-24 bg-zinc-950 border-t border-b border-purple-400">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="italic text-3xl text-purple-200">"A diferença entre quem sonha e quem realiza é a disciplina diária. Eu já comecei hoje."</p>
+            <p class="mt-6 font-semibold text-purple-400">— Esthefany, 15 anos • 19 de março de 2026</p>
+            
+            <div class="flex justify-center gap-6 mt-12">
+                <div class="bg-zinc-800 px-6 py-3 rounded-2xl flex items-center gap-3">
+                    <span class="text-xl">📆</span>
+                    <span>Rotina de estudos pronta</span>
+                </div>
+                <div class="bg-zinc-800 px-6 py-3 rounded-2xl flex items-center gap-3">
+                    <span class="text-xl">📱</span>
+                    <span>Instagram @esthefanyfisioterapia (em breve)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO / FOOTER -->
+    <footer id="contato" class="bg-zinc-900 py-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-3xl font-bold">Quer acompanhar minha jornada?</h3>
+                <p class="text-zinc-400 mt-2">Manda mensagem ou me siga quando eu abrir as redes!</p>
+                <div class="flex gap-4 mt-8">
+                    <button class="flex-1 py-4 bg-[#1DA1F2] hover:bg-sky-400 font-bold rounded-2xl flex items-center justify-center gap-2">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </button>
+                    <button class="flex-1 py-4 bg-gradient-to-r from-pink-500 to-violet-500 font-bold rounded-2xl flex items-center justify-center gap-2">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </button>
+                </div>
+                <input type="email" placeholder="Seu e-mail para receber atualizações" 
+                       class="mt-6 w-full bg-zinc-800 border border-purple-300 rounded-2xl px-6 py-4 focus:outline-none">
+                <button class="mt-3 w-full py-4 bg-purple-600 hover:bg-fuchsia-500 font-semibold rounded-2xl">Inscrever-se na jornada</button>
+            </div>
+            
+            <div class="text-sm text-zinc-400 space-y-6">
+                <p>Feito com muito carinho e muita roxa 💜 por Grok para Esthefany</p>
+                <p>© 2026 • Todos os sonhos são válidos</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-purple-300">Sobre</a>
+                    <a href="#" class="hover:text-purple-300">Objetivos</a>
+                    <a href="#" class="hover:text-purple-300">Compartilhar</a>
+                </div>
+                <p class="text-xs">Este site é 100% editável. Copie todo o código e salve como index.html</p>
+            </div>
+        </div>
+        
+        <div class="text-center text-xs opacity-50 mt-16">
+            Feito especialmente para você, Esthefany! ✨ Você vai passar na federal e realizar todos os seus sonhos!
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script já carregado
+        console.log("%c💜 Site da Esthefany carregado com sucesso! Você é incrível!", "color:#c084fc; font-size:16px");
+        
+        // Scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </html>
